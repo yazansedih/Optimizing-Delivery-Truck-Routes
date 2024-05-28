@@ -24,24 +24,33 @@ body {
 
 .container h1 {
   color: #fff;
+  margin-bottom: 45px;
   text-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
 }
 
 .panel {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 800px;
+  height: 500px;
   background: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
   box-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
+}
+
+form {
+  margin: 20px;
 }
 
 .depot {
   position: absolute;
   background-color: green;
-  width: 5px;
-  height: 5px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
+  top: 75px;
+  left: 75px;
+  z-index: 999;
 }
 
 .btn {
@@ -56,7 +65,7 @@ body {
   font-weight: bold;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px 10px;
+  margin: 15px 10px;
   box-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
 }
 
@@ -71,6 +80,7 @@ input {
   border-radius: 5px;
   padding: 10px 20px;
   margin: 10px 10px;
+  cursor: text;
 }
 
 .delivary-point {
@@ -87,6 +97,28 @@ label {
   width: 45%;
   padding: 15px 0;
   color: #fff;
+  cursor: text;
+}
+
+.truck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.initial-solution {
+  display: block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.route-line {
+  stroke: blue;
+  stroke-width: 2;
 }
 
 .delivary-point label span {
@@ -99,4 +131,16 @@ label {
 .delivary-point input:focus + label span,
 .delivary-point input:valid + label span {
   transform: translateY(-30px);
+}
+
+.point {
+  position: absolute;
+  background-color: red;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.point:hover {
+  background-color: orange;
 }
