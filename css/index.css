@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  color: #fff;
+  text-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
+}
+
+.panel {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background: #fff;
+  margin-bottom: 20px;
+  box-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
+}
+
+.depot {
+  position: absolute;
+  background-color: green;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.btn {
+  height: 50px;
+  width: 220px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  box-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
+}
+
+input {
+  height: 50px;
+  width: 220px;
+  border: none;
+  outline: none;
+  background: steelblue;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 10px;
+}
+
+.delivary-point {
+  position: relative;
+  display: block;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  border-bottom: 1px #fff solid;
+  width: 45%;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.delivary-point label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.delivary-point input:focus + label span,
+.delivary-point input:valid + label span {
+  transform: translateY(-30px);
+}
