@@ -17,7 +17,9 @@
     <div class="container">
       <h1>Delivery Truck Routes</h1>
       <div class="panel">
-        <div class="depot"></div>
+        <div class="depot">
+          <i class="fas fa-warehouse"></i>
+        </div>
         <svg
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
         ></svg>
@@ -33,6 +35,10 @@
         <button class="btn initial-solution">Initial Solution</button>
         <button class="btn optimization-solution">Optimization Solution</button>
         <button class="btn clear">Clear</button>
+      </div>
+      <div class="distance-display">
+        <p id="initial-distance">Initial Total Distance: 0 units</p>
+        <p id="optimized-distance">Optimized Total Distance: 0 units</p>
       </div>
     </div>
 

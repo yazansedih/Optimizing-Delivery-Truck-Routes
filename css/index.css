@@ -13,6 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  padding: 0 10px;
 }
 
 .container {
@@ -20,18 +21,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 
 .container h1 {
   color: #fff;
   margin-bottom: 45px;
   text-shadow: 2px 3px 10px rgb(0, 0, 0, 0.3);
+  font-size: 24px;
 }
 
 .panel {
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 90vw;
+  max-width: 800px;
+  height: 60vh;
+  max-height: 500px;
   background: #fff;
   margin-bottom: 15px;
   cursor: pointer;
@@ -40,14 +45,16 @@ body {
 
 form {
   margin: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .depot {
   position: absolute;
-  background-color: green;
   width: 15px;
   height: 15px;
-  border-radius: 50%;
   top: 75px;
   left: 75px;
   z-index: 999;
@@ -102,9 +109,10 @@ label {
 
 .truck {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .initial-solution {
@@ -143,4 +151,96 @@ label {
 
 .point:hover {
   background-color: orange;
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .panel {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .btn,
+  input {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .depot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 5px;
+  }
+
+  .container h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .panel {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .btn,
+  input {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .depot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .truck {
+    flex-direction: column;
+  }
+}
+.total-distance {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+.panel div {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 3px;
+  font-size: 10px;
+  z-index: 1000;
+}
+
+.panel svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.distance-display {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
