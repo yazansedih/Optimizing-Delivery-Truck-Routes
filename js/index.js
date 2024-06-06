@@ -18,9 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let remainingCapacity = trucks.map((truck) => truck.capacity);
   let remainingPoints;
 
+<<<<<<< Updated upstream
   let deliveryPoints = JSON.parse(localStorage.getItem("deliveryPoints")) || [];
   localStorage.removeItem("deliveryPoints");
   deliveryPoints = [];
+=======
+  deliveryPoints = [];
+  while (panel.firstChild) {
+    panel.removeChild(panel.firstChild);
+  }
+  localStorage.removeItem("deliveryPoints");
+
+  const savedPoints = JSON.parse(localStorage.getItem("deliveryPoints"));
+  if (savedPoints) {
+    deliveryPoints = savedPoints;
+    displayDeliveryPoints();
+  }
+>>>>>>> Stashed changes
 
   panel.addEventListener("click", (event) => {
     const weight = parseFloat(weightInput.value);
